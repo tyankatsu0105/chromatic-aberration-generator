@@ -1,0 +1,20 @@
+{
+  "name": "chromatic-aberration-generator",
+  "version": "0.0.0",
+  "description": "[Chromatic aberration](https://en.wikipedia.org/wiki/Chromatic_aberration)",
+  "keywords": [],
+  "homepage": "https://github.com/tyankatsu0105/chromatic-aberration-generator#readme",
+  "bugs": {
+    "url": "https://github.com/tyankatsu0105/chromatic-aberration-generator/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tyankatsu0105/chromatic-aberration-generator.git"
+  },
+  "license": "ISC",
+  "author": "tyankatsu <frips.ryilsufupe+dev@gmail.com> (https://tyankatsu.netlify.com/)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
