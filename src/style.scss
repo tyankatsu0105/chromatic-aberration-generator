@@ -1,0 +1,13 @@
+:root {
+  // =======================
+  // color
+  // =======================
+  --main-bg-color: #263238;
+  --main-font-color: #fff;
+}
+
+body {
+  font-size: var(--main-font-size);
+  color: var(--main-font-color);
+  background-color: var(--main-bg-color);
+}
