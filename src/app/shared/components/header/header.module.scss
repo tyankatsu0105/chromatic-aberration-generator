@@ -31,12 +31,12 @@
 
   &::before {
     background-color: #0ff;
-    transform: translate(4px, 4px) rotate(0.1deg);
+    transform: translate(3px, 3px) rotate(0.1deg);
   }
 
   &::after {
     background-color: #f0f;
-    transform: translate(-4px, -4px);
+    transform: translate(-3px, -3px);
   }
 }
 

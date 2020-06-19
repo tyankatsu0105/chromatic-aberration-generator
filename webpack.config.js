@@ -3,7 +3,13 @@ const ImagesConfigWebpackPlugin = require("image-config-webpack-plugin");
 const ScssConfigWebpackPlugin = require("scss-config-webpack-plugin");
 const TsConfigWebpackPlugin = require("ts-config-webpack-plugin");
 
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
+
+
 module.exports = {
+  resolve: {
+    plugins: [new TsconfigPathsPlugin()]
+  },
   plugins: [
     // Generate a base html file and injects all generated css and js files
     new HtmlWebpackPlugin({
