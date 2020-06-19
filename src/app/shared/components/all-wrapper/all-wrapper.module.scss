@@ -1,0 +1,5 @@
+.all-wrapper {
+  display: grid;
+  grid-template-rows: minmax(50px, auto) 1fr minmax(50px, auto);
+  min-height: 100vh;
+}

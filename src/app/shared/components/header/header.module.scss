@@ -1,0 +1,45 @@
+.header {
+  padding: var(--main-container-horizontal-padding)
+    var(--main-container-horizontal-padding);
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.logo {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: rgba($color: #000, $alpha: 0.5);
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: "";
+    mix-blend-mode: multiply;
+  }
+
+  &::before {
+    background-color: #0ff;
+    transform: translate(4px, 4px) rotate(0.1deg);
+  }
+
+  &::after {
+    background-color: #f0f;
+    transform: translate(-4px, -4px);
+  }
+}
+
+.logo-type {
+  margin-left: calc(var(--base-space) * 4);
+}

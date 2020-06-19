@@ -1,5 +1,11 @@
 import * as React from "react";
 
-import { Header } from "./shared/components";
+import { Header, Footer, AllWrapper } from "./shared/components";
 
-export const App = () => <Header />;
+export const App = () => (
+  <AllWrapper>
+    <Header />
+    <p>contents</p>
+    <Footer />
+  </AllWrapper>
+);
