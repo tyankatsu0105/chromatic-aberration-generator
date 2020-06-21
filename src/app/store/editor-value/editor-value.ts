@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 const initialState = {
   translate1: 3,
@@ -9,16 +9,16 @@ export const slice = createSlice({
   name: "editorValue",
   initialState,
   reducers: {
-    updateTranslate1: (state, { payload }) => {
+    updateTranslate1: (state, action: PayloadAction<number>) => {
       return {
         ...state,
-        translate1: payload,
+        translate1: action.payload,
       };
     },
-    updateTranslate2: (state, { payload }) => {
+    updateTranslate2: (state, action: PayloadAction<number>) => {
       return {
         ...state,
-        translate2: payload,
+        translate2: action.payload,
       };
     },
   },
