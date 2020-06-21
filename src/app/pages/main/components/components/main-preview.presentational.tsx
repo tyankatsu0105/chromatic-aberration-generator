@@ -3,6 +3,8 @@ import styles from "./main-preview.module.scss";
 
 import styled from "@emotion/styled";
 
+import { State } from "~store";
+
 type PreviewItem = {
   translate1: number;
   translate2: number;
@@ -46,10 +48,19 @@ const PreviewItem = styled.div<PreviewItem>`
     );
   }
 `;
-export const MainPreviewPresentational: React.FC = () => {
+
+type Props = {
+  editorValue: State["editorValue"];
+};
+export const MainPreviewPresentational: React.FC<Props> = (props) => {
   return (
     <div className={styles.container}>
-      <PreviewItem translate1={3} translate2={3} color1="#0ff" color2="#f0f" />
+      <PreviewItem
+        translate1={props.editorValue.translate1}
+        translate2={props.editorValue.translate2}
+        color1="#0ff"
+        color2="#f0f"
+      />
     </div>
   );
 };

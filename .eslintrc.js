@@ -21,7 +21,7 @@ module.exports = {
   rules: {
     "prettier/prettier": "error",
     "@typescript-eslint/explicit-module-boundary-types": "off",
-    "react/prop-types": ['error', { ignore: ['children'] }],
+    "react/prop-types": 'off',
     "react/jsx-no-useless-fragment": "warn"
   },
 };
