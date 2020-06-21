@@ -3,7 +3,7 @@ import styles from "./main-preview.module.scss";
 
 import styled from "@emotion/styled";
 
-import { State } from "~store";
+import { State } from "~store/index";
 
 type PreviewItem = {
   translate1: number;

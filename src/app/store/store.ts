@@ -1,23 +1,12 @@
-import { configureStore, combineReducers } from "@reduxjs/toolkit";
+import { combineReducers } from "redux";
+import { configureStore } from "@reduxjs/toolkit";
 
 import * as editorValue from "./editor-value";
 
-/**
- * Reducer
- */
 const reducer = combineReducers({
-  [editorValue.featureKey]: editorValue.reducer,
+  [editorValue.slice.name]: editorValue.slice.reducer,
 });
 
-/**
- * Store
- */
-export const store = configureStore({
-  reducer,
-});
+export const store = configureStore({ reducer });
 
-/**
- * Types
- */
-export type State = ReturnType<typeof reducer>;
-export type AppDispatch = typeof store.dispatch;
+export type State = ReturnType<typeof store.getState>;

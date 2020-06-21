@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useSelector } from "react-redux";
 
-import { State } from "~store";
+import { State } from "~store/index";
 
 import { MainPreviewPresentational } from "./main-preview.presentational";
 
