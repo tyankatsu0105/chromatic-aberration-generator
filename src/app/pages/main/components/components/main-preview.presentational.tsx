@@ -6,17 +6,23 @@ import styled from "@emotion/styled";
 import { State } from "~store/index";
 
 type PreviewItem = {
-  translate1: number;
-  translate2: number;
-  color1: string;
-  color2: string;
+  element1: {
+    x: number;
+    y: number;
+    color: string;
+  };
+  element2: {
+    x: number;
+    y: number;
+    color: string;
+  };
 };
 
 const PreviewItem = styled.div<PreviewItem>`
   position: relative;
   display: inline-block;
-  width: 400px;
-  height: 400px;
+  width: 200px;
+  height: 200px;
   background-color: rgba(0, 0, 0, 0.5);
 
   &::before,
@@ -32,19 +38,19 @@ const PreviewItem = styled.div<PreviewItem>`
   }
 
   &::before {
-    background-color: ${(props) => props.color1};
+    background-color: ${(props) => props.element1.color};
     transform: translate(
-        ${(props) => props.translate1}px,
-        ${(props) => props.translate1}px
+        ${(props) => props.element1.x}px,
+        ${(props) => props.element1.y}px
       )
       rotate(0.1deg);
   }
 
   &::after {
-    background-color: ${(props) => props.color2};
+    background-color: ${(props) => props.element2.color};
     transform: translate(
-      -${(props) => props.translate2}px,
-      -${(props) => props.translate2}px
+      ${(props) => props.element2.x}px,
+      ${(props) => props.element2.y}px
     );
   }
 `;
@@ -56,10 +62,16 @@ export const MainPreviewPresentational: React.FC<Props> = (props) => {
   return (
     <div className={styles.container}>
       <PreviewItem
-        translate1={props.editorValue.translate1}
-        translate2={props.editorValue.translate2}
-        color1="#0ff"
-        color2="#f0f"
+        element1={{
+          x: props.editorValue.element1.x,
+          y: props.editorValue.element1.y,
+          color: props.editorValue.element1.color,
+        }}
+        element2={{
+          x: props.editorValue.element2.x,
+          y: props.editorValue.element2.y,
+          color: props.editorValue.element2.color,
+        }}
       />
     </div>
   );
